@@ -1,0 +1,16 @@
+<?php
+    //CONEXION CON LA BASE DE DATOS
+    $DB_NAME = '';
+    $DB_USER = '';
+    $DB_PASSWORD = '';
+    $DB_HOST = '';
+    $DB_PORT = '';
+
+    $mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
+
+    if (mysqli_connect_errno()) {
+        printf("Falló la conexión. Error : %s\n", $mysqli->connect_error);
+        exit();
+    }
+
+    $mysqli->set_charset("utf8");
